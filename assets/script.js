@@ -21,3 +21,67 @@ $(function () {
     //
     // TODO: Add code to display the current date in the header of the page.
 });
+
+// Calendar App
+
+// Read from localStorage
+// Populate page with data if exists in localStorage
+
+// click event with delegation to target the text area assoc with the save button
+// use the sibling DOM method to traverse the DOM, event.target parent/sibling
+// capture the value of the text area, save string to local storage
+
+// Use Dayjs to get current time use military time
+// read the value of the time block from the html
+// if statement that compares the vales and adds a class to change the color
+// loop through html elements and read a data-attribute time
+
+// Get the current date and format it using Dayjs
+var currentDate = dayjs().format("dddd, MMM DD, YYYY");
+
+// Update the text content of the time element with the formatted date string
+document.getElementById("current-date").textContent = currentDate;
+
+// Get the current hour using Dayjs
+var currentHour = dayjs().hour();
+
+$(".time-block").each(function () {
+    var hourBlock = parseInt($(this).attr("data-hour"));
+
+    if (hourBlock < currentHour) {
+        $(this).addClass("past");
+    } else if (hourBlock === currentHour) {
+        $(this).addClass("present");
+    } else {
+        $(this).addClass("future");
+    }
+});
+
+function colorChange() {
+    // Get the current hour in 24-hour format
+    var currentHour = parseInt(dayjs().format('H'));
+
+    // Loop through each time block
+    $('.time-block').each(function () {
+        // Get the hour of the time block
+        var hour = parseInt($(this).data("hour"));
+
+        // Add or remove the appropriate class based on the hour and current time
+        if (hour < currentHour) {
+            $(this).removeClass('present future').addClass('past');
+        } else if (hour === currentHour) {
+            $(this).removeClass('past future').addClass('present');
+        } else {
+            $(this).removeClass('past present').addClass('future');
+        }
+        console.log(hour);
+        console.log(currentHour);
+
+    });
+    setInterval(colorChange, 60000);
+}
+
+// Call the colorChange function when the page first loads
+colorChange();
+
+// Call the colorChange function every minute to update the colors
