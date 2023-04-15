@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.4/dayjs.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="./assets/style.css" />
     <title>Work Day Scheduler</title>
 </head>
@@ -27,7 +24,7 @@
        
         <div data-hour="9" class="row time-block">
             <div class="col-2 col-md-1 hour text-center py-3">9AM</div>
-            <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
+            <textarea class="col-8 col-md-10 description" rows="3" id="9text"> </textarea>
             <button class="btn saveBtn col-2 col-md-1" aria-label="save">
                 <i class="fas fa-save" aria-hidden="true"></i>
             </button>
@@ -36,7 +33,7 @@
    
         <div data-hour="10" class="row time-block">
             <div class="col-2 col-md-1 hour text-center py-3">10AM</div>
-            <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
+            <textarea class="col-8 col-md-10 description" rows="3" id="10text"> </textarea>
             <button class="btn saveBtn col-2 col-md-1" aria-label="save">
                 <i class="fas fa-save" aria-hidden="true"></i>
             </button>
@@ -44,7 +41,7 @@
 
         <div data-hour="11" class="row time-block">
             <div class="col-2 col-md-1 hour text-center py-3">11AM</div>
-            <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
+            <textarea class="col-8 col-md-10 description" rows="3" id="11text"> </textarea>
             <button class="btn saveBtn col-2 col-md-1" aria-label="save">
                 <i class="fas fa-save" aria-hidden="true"></i>
             </button>
@@ -52,7 +49,7 @@
 
         <div data-hour="12" class="row time-block">
             <div class="col-2 col-md-1 hour text-center py-3">12PM</div>
-            <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
+            <textarea class="col-8 col-md-10 description" rows="3" id="12text"> </textarea>
             <button class="btn saveBtn col-2 col-md-1" aria-label="save">
                 <i class="fas fa-save" aria-hidden="true"></i>
             </button>
@@ -60,7 +57,7 @@
 
         <div data-hour="13" class="row time-block">
             <div class="col-2 col-md-1 hour text-center py-3">1PM</div>
-            <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
+            <textarea class="col-8 col-md-10 description" rows="3" id="13text"> </textarea>
             <button class="btn saveBtn col-2 col-md-1" aria-label="save">
                 <i class="fas fa-save" aria-hidden="true"></i>
             </button>
@@ -68,7 +65,7 @@
 
         <div data-hour="14" class="row time-block">
             <div class="col-2 col-md-1 hour text-center py-3">2PM</div>
-            <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
+            <textarea class="col-8 col-md-10 description" rows="3" id="14text"> </textarea>
             <button class="btn saveBtn col-2 col-md-1" aria-label="save">
                 <i class="fas fa-save" aria-hidden="true"></i>
             </button>
@@ -76,7 +73,7 @@
 
         <div data-hour="15" class="row time-block">
             <div class="col-2 col-md-1 hour text-center py-3">3PM</div>
-            <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
+            <textarea class="col-8 col-md-10 description" rows="3" id="15text"> </textarea>
             <button class="btn saveBtn col-2 col-md-1" aria-label="save">
                 <i class="fas fa-save" aria-hidden="true"></i>
             </button>
@@ -84,7 +81,7 @@
 
         <div data-hour="16" class="row time-block">
             <div class="col-2 col-md-1 hour text-center py-3">4PM</div>
-            <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
+            <textarea class="col-8 col-md-10 description" rows="3" id="16text"> </textarea>
             <button class="btn saveBtn col-2 col-md-1" aria-label="save">
                 <i class="fas fa-save" aria-hidden="true"></i>
             </button>
@@ -92,7 +89,7 @@
 
         <div data-hour="17" class="row time-block">
             <div class="col-2 col-md-1 hour text-center py-3">5PM</div>
-            <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
+            <textarea class="col-8 col-md-10 description" rows="3" id="17text"> </textarea>
             <button class="btn saveBtn col-2 col-md-1" aria-label="save">
                 <i class="fas fa-save" aria-hidden="true"></i>
             </button>
@@ -100,7 +97,7 @@
 
         <div data-hour="18" class="row time-block">
             <div class="col-2 col-md-1 hour text-center py-3">6PM</div>
-            <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
+            <textarea class="col-8 col-md-10 description" rows="3" id="18text"> </textarea>
             <button class="btn saveBtn col-2 col-md-1" aria-label="save">
                 <i class="fas fa-save" aria-hidden="true"></i>
             </button>
@@ -108,7 +105,7 @@
 
         <div data-hour="19" class="row time-block">
             <div class="col-2 col-md-1 hour text-center py-3">7PM</div>
-            <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
+            <textarea class="col-8 col-md-10 description" rows="3" id="19text"> </textarea>
             <button class="btn saveBtn col-2 col-md-1" aria-label="save">
                 <i class="fas fa-save" aria-hidden="true"></i>
             </button>
@@ -116,7 +113,7 @@
 
         <div data-hour="20" class="row time-block">
             <div class="col-2 col-md-1 hour text-center py-3">8PM</div>
-            <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
+            <textarea class="col-8 col-md-10 description" rows="3" id="20text"> </textarea>
             <button class="btn saveBtn col-2 col-md-1" aria-label="save">
                 <i class="fas fa-save" aria-hidden="true"></i>
             </button>
@@ -124,7 +121,7 @@
 
         <div data-hour="21" class="row time-block">
             <div class="col-2 col-md-1 hour text-center py-3">9PM</div>
-            <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
+            <textarea class="col-8 col-md-10 description" rows="3" id="21text"> </textarea>
             <button class="btn saveBtn col-2 col-md-1" aria-label="save">
                 <i class="fas fa-save" aria-hidden="true"></i>
             </button>
@@ -132,7 +129,7 @@
 
         <div data-hour="22" class="row time-block">
             <div class="col-2 col-md-1 hour text-center py-3">10PM</div>
-            <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
+            <textarea class="col-8 col-md-10 description" rows="3" id="22text"> </textarea>
             <button class="btn saveBtn col-2 col-md-1" aria-label="save">
                 <i class="fas fa-save" aria-hidden="true"></i>
             </button>
@@ -140,7 +137,7 @@
 
         <div data-hour="23" class="row time-block">
             <div class="col-2 col-md-1 hour text-center py-3">11PM</div>
-            <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
+            <textarea class="col-8 col-md-10 description" rows="3" id="23text"> </textarea>
             <button class="btn saveBtn col-2 col-md-1" aria-label="save">
                 <i class="fas fa-save" aria-hidden="true"></i>
             </button>
@@ -149,7 +146,6 @@
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
             integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
-
         <script src="./assets/script.js"></script>
 </body>
 

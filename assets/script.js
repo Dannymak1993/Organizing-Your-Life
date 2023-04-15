@@ -42,20 +42,17 @@ var currentDate = dayjs().format("dddd, MMM DD, YYYY");
 // Update the text content of the time element with the formatted date string
 document.getElementById("current-date").textContent = currentDate;
 
-// Get the current hour using Dayjs
-var currentHour = dayjs().hour();
-
-$(".time-block").each(function () {
-    var hourBlock = parseInt($(this).attr("data-hour"));
-
-    if (hourBlock < currentHour) {
-        $(this).addClass("past");
-    } else if (hourBlock === currentHour) {
-        $(this).addClass("present");
-    } else {
-        $(this).addClass("future");
-    }
+$(".saveBtn").click(function(){
+    var textArea = $(this).siblings(".description").val();
+    var dataTime = $(this).parent().attr("data-hour");
+    console.log(dataTime, textArea);
+    localStorage.setItem(dataTime, textArea);
 });
+
+for (let i=9; i<24; i++){
+    $(`#${i}text`).val(localStorage.getItem(`${i}`));
+}
+
 
 function colorChange() {
     // Get the current hour in 24-hour format
@@ -85,3 +82,5 @@ function colorChange() {
 colorChange();
 
 // Call the colorChange function every minute to update the colors
+
+
