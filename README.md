@@ -17,9 +17,9 @@ Navigate to the urls located below and click inside time block text areas to beg
 
 ![alt text](./assets/images/screencapture-127-0-0-1-5500-index-html-2023-04-15-12_51_18.png)
 
-[Github Page](https://github.com/Dannymak1993/Organizing-Your-Life)
+[Repository](https://github.com/Dannymak1993/Organizing-Your-Life)
 
-[Repository](https://dannymak1993.github.io/Organizing-Your-Life/)
+[Github Page Live URL](https://dannymak1993.github.io/Organizing-Your-Life/)
 
 ## Credits
 
