@@ -1,14 +1,14 @@
-# How Well Do You Know Rock Climbing?
+# Organizing Your Life
 
 ## Description
 
 What I have created is a calendar app that you can use to keep track of your busy daily schedule. The reason I built this product is to to incorporate the new concepts learned in Jquery, dayJS , event listeners, objects and local storage. Mastery of these concepts will help with future projects of larger magnitude. 
+
 ## Table of Contents (Optional)
 
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
-
 
 ## Usage
 
@@ -19,7 +19,7 @@ Navigate to the urls located below and click inside time block text areas to beg
 
 [Github Page](https://github.com/Dannymak1993/Organizing-Your-Life)
 
-[Repository](https://github.com/Dannymak1993/How-Well-Do-You-Know-Rock-Climbing-)
+[Repository](https://dannymak1993.github.io/Organizing-Your-Life/)
 
 ## Credits
 
